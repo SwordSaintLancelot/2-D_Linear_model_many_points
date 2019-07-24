@@ -9,8 +9,9 @@ import matplotlib.pyplot as plt
 
 def linfit(x,y):
     n = len(x)
-    a = (sum(x*y)-1/n*sum(x)*sum(y))/ ((sum(x**2))-1/n*(sum(x)**2))
-    b = sum(y)/n-sum(x)/n*a
+    for i in range(n):
+        a = (sum(x[i]*y[i])-1/n*sum(x[i])*sum(y[i]))/ ((sum(x[i]**2))-1/n*(sum(x[i])**2))
+        b = sum(y[i])/n-sum(x[i])/n*a
     return a,b
 
 

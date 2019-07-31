@@ -16,11 +16,12 @@ def linfit(x,y):
     return a,b
 
 
-def plotting(x,y,a,b):
+def plotting(x,y,b):
     plt.scatter(x,y,marker = "x", color = 'red')
     # Plot the first scatter graph with initial values of arrays provided
-    pred_val = b+a*x
+    
     #predict the values
+    pred_val = b+a*x
     plt.plot(x,pred_val, marker = "o", color="blue")
     #plot the predicted linear regression line
     plt.show()
@@ -28,7 +29,7 @@ def plotting(x,y,a,b):
 
 if __name__ =="__main__":
     #n = int(input ('number of coordinates: '))
-    x = np.array([0,1,2,3,4,5])
-    y = np.array([0,1,2,3,4,5])
+    x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    y = np.array([1, 3, 2, 5, 7, 8, 8, 9, 10, 12])
     a,b = linfit(x,y)
-    plotting(x,y,a,b)
+    plotting(x,y,b)
